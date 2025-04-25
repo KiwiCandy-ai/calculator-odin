@@ -56,9 +56,9 @@ function printDisplay(event) {
     const userInput = event.target;
     fullString = display.textContent += userInput.innerText
     splitString = fullString.split('+')
-    splitString = fullString.split('-')
-    splitString = fullString.split('/')
-    splitString = fullString.split('*')
+    // splitString = fullString.split('-')
+    // splitString = fullString.split('/')
+    // splitString = fullString.split('*')
     num1 = splitString[0]
     num2 = splitString[1]
     num1 = parseFloat(num1)
@@ -69,5 +69,3 @@ function printDisplay(event) {
 equalsbtn.addEventListener('click', function(e) {
 operate()
 })
-
-
