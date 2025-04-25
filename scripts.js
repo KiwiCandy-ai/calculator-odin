@@ -1,28 +1,33 @@
 let display = document.getElementById('display')
 const buttons = document.querySelectorAll('.buttons')
 const actionbuttons = document.querySelectorAll('.action-buttons')
+const equalsbtn = document.querySelector('.equals-button')
 
 function addNumbers(num,num) {
-    return num1 + num2
+    const answer = num1 + num2
+    display.textContent = answer
 
 }
 
 function subtractNumbers(num,num) {
-    return num1 - num2
+    const answer = num1 - num2
+    display.textContent = answer
 }
 
 function multiplyNumbers(num,num) {
-    return num1 * num2
+    const answer = num1 * num2
+    display.textContent = answer
 }
 
 
 function divideNumbers(num,num) {
-    return num1 / num2
+    const answer = num1 / num2
+    display.textContent = answer
 }
 
 let num1 = 0
 let num2 = 0
-let operator = ['+', '-', '*', '/']
+let operator = '+'
 
 function operate() {
     if (fullString.includes('+')) {
@@ -51,11 +56,18 @@ function printDisplay(event) {
     const userInput = event.target;
     fullString = display.textContent += userInput.innerText
     splitString = fullString.split('+')
+    splitString = fullString.split('-')
+    splitString = fullString.split('/')
+    splitString = fullString.split('*')
     num1 = splitString[0]
     num2 = splitString[1]
     num1 = parseFloat(num1)
     num2 = parseFloat(num2)
     
 } 
+
+equalsbtn.addEventListener('click', function(e) {
+operate()
+})
 
 
